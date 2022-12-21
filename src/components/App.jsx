@@ -34,7 +34,6 @@ addTar=(even)=>{
   }
 
   render(){
-    const filteredContacts = this.filtered();
     return (
     <div
       style={{
@@ -50,7 +49,7 @@ addTar=(even)=>{
 
   <h2>Contacts</h2>
   {this.state.contacts.length?
-      <Contacts cont={filteredContacts} delete={this.delete} add={this.addTar}/>
+      <Contacts cont={this.filtered} delete={this.delete} add={this.addTar}/>
       :""}
     </div>
     

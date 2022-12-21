@@ -1,12 +1,12 @@
 
 import  PropTypes  from "prop-types";
-export default function Contacts ({cont, delete, add}) {
+export default function Contacts ({cont, deleted, add}) {
     return <div>
                     <ul>
                         {cont.map(m=>(
                             <li key={m.id}>
                                 <p>{m.name}: {m.number}</p>
-                                <button type="button" onClick={()=> delete(m.id)} >delete</button>
+                                <button type="button" onClick={()=> deleted(m.id)} >delete</button>
                             </li>
                         ))}
                     </ul>

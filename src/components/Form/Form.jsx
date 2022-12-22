@@ -18,18 +18,16 @@ export default function Form({ submit }) {
     }
   };  
 
+  const handelClick =()=>{
+    setName('');
+    setNumber('');
+}
   const handelSubmit = even => {
     even.preventDefault();
     submit({ name, number });
-    
+    handelClick();
   };
 
-  const handelClick =()=>{
-    setTimeout(()=>{
-        setName('');
-        setNumber('');
-    }) 
-   }
 
   return (
     <div>
@@ -55,7 +53,7 @@ export default function Form({ submit }) {
           required
         />
         <br />
-        <button type="submit" onClick={handelClick}>Add contacts</button>
+        <button type="submit">Add contacts</button>
       </form>
     </div>
   );
